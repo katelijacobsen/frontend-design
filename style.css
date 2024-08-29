@@ -1,4 +1,20 @@
 article {
-    max-width: 65ch;
-    margin-inline: auto;
+    display: grid;
+    grid-template-columns:  [full-start] 1fr [callout-start] 2rem [content] minmax(0, 65ch) [callout-end]2rem 1fr [full-start]
+    ; /*med 0 kan du være sikker på at cellerne bliver fyldt ud.*/
+
+    > * {
+    grid-column: content;
 }
+
+img{
+    grid-column: full; /*Alternativt kan du også sige full-end, men du spare mere skrivning...*/
+}
+
+blockquote{
+    grid-column: callout;
+}
+
+}
+
+/*Nested øvelse.*/

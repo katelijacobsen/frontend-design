@@ -1,10 +1,10 @@
 /* Dine styles her */
 article {
-
+/*Hver element der følger direkt efter det andet */
     * + *{
         margin-top: var(--flow-space, .5rlh);
     }
-
+/*Laver specifikke regler. h2 & h3 har specifikke værdier. Mariner bliver ændret.*/
     h2 {
         --flow-space: 2rlh;
       }
@@ -12,7 +12,7 @@ article {
       h3 {
         --flow-space: 1rlh;
       }
-      
+      /*Elementer efter h3 får en mindre margin-top værdi på .25rlh*/
       h3 + * {
         --flow-space: .25rlh;
       }

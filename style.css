@@ -7,10 +7,64 @@
     --card-padding: 1rem;
 
     --font-heading: 1.75rem;
+}
+/*vælger elementerne, der kommer efter de andre elementer*/
+* + * {
+    margin: 0;
+    padding: 0;
+}
+/*Sætter vores card som flex*/
+.profile-card {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    gap: 1.5rem;
+}
+/*Flex for ikoner så de danner en række & flugter sammnen med teksten*/
+.socialmedia-icons {  
+    display: flex;
+    gap: 2rem;
 
-    /* Når du synes, du er færdig, så ændr værdien herunder til '1' for at se dit resultat i browseren */
-    --hide-overlay: 0;
+    /*Styler vores iconer*/
+    svg {
+        color: var(--color-icon);
+        aspect-ratio: 1/1;
+        width: 1.5em;
+    }
 }
 
+/* Profile image styling */
+.profile-picture {
+    width: 10rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
 
-/* Begynd her... */
+/* General styles */
+h2 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    color: black;
+    text-wrap: pretty;
+    line-height: 1rem;
+}
+
+p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: teal;
+    text-wrap: pretty;
+    line-height: 3rem;
+}
+
+li {
+   list-style-type: none;
+}
+a{
+    list-style: none;
+    text-decoration: none;
+}

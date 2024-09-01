@@ -1,4 +1,28 @@
-article {
+
+/*Start*/
+/* article {
     max-width: 65ch;
     margin-inline: auto;
+}  */
+
+article{
+    /*Fra CSS Exercssises*/
+    display: grid;
+    gap: 0;
+   grid-template-columns: [a-start] 1fr [b-start] 2fr [c-start] 2fr [d-start] 2fr [d-end] 2fr [c-end] 2fr [b-end] 2fr [a-end];
+}
+
+/*griber alle vores children i parent*/
+article > * {
+    grid-column: c;
+
+    
+}
+/*Full-bleed: Billedet skal dælle hele viewport*/
+img{
+    grid-column: a;
+}
+/*quote, der 'popper' lidt ud*/
+blockquote{
+    grid-column: b;
 }

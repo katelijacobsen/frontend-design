@@ -2,7 +2,7 @@
 const { cardContent } = Astro.props;
 ---
 
-<ul class="full-width">
+<ul class="scrollable-list">
   {
     cardContent.map((card) => (
       <li>
@@ -15,6 +15,21 @@ const { cardContent } = Astro.props;
 
 <style>
   ul {
+    display: flex;           
+    gap: 1rem;              
+    padding: 1rem;
     list-style: none;
+    padding-inline:
+    max(1rem, 50% - 1200px / 2);
+    max-width: 100%;        
+    overflow-x: auto;       
+  }
+
+  li {
+    background-color: rgb(234, 234, 234);
+    padding: 1rem;
+    border-radius: 1rem;
+    flex: 0 0 auto;          
+    width: 20rem;            
   }
 </style>

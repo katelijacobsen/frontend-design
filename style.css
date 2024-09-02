@@ -19,7 +19,6 @@ section {
     .content {
         grid-column: 2/-1;
         grid-row: 1;
-        margin-bottom: 6rem;
         >*+* {
             margin-top: .75rlh;
         }
@@ -73,7 +72,7 @@ section {
         .content {
             grid-column: 1;
             grid-row: 1;
-            margin-bottom: 1rem;
+            margin-bottom: .75rlh;
             >*+* {
                 margin-top: .75rlh;
             }
@@ -95,7 +94,7 @@ section {
     
         figcaption {
             grid-row: 2;
-            margin-top: .5em;
+            margin-top: .75rlh;
             font-size: 85%;
             color: var(--gray-900);
             background: var(--gray-100);

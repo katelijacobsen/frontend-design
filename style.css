@@ -2,7 +2,8 @@ li,
 main,
 aside {
     /* Sæt container-type */
-}
+    container-type: inline-size;
+  }
 
 ul {
     display: grid;
@@ -12,7 +13,14 @@ ul {
     /* Tilføj container regel, når width > 700px */
     /* - Indstil 2 kolonner */
     /* - Sæt det første barn til `grid-column: span 2` */
-}
+    @container (min-width:700px){
+        ul:first-child{
+          grid-template-columns: repeat(2, 1fr);
+          grid-column: 1/ span 2;
+      }
+  
+    }
+  }
 
 article {
     display: grid;
@@ -38,16 +46,38 @@ article {
 
 
     /* Tilføj container regel når width > 500px */
-    /* - Indstil 2 kolonner */
-    /* - Sæt `order: 1;` på img på hvert andet card */
+    @container (min-width: 500px) {
+      article{
+        /* - Indstil 2 kolonner */
+        grid-template-columns: repeat(2, 1fr);
+        /* - Sæt `order: 1;` på img på hvert andet card */
+      }
+      article:nth-child(even) img{
+        order: 1;
+      }
+      
+    }
+}
+
+/* Læg mærke til, at vi bør stadig bruge @media, når det handler om viewporten */
+/* Tilføj container regel når width > 500px */
+@container (min-width: 500px) {
+  article {
+      /* - Indstil 2 kolonner */
+      grid-template-columns: 1fr 1fr;
+  }
+
+  article:nth-child(even) img {
+      /* - Sæt `order: 1;` på img på hvert andet card */
+      order: 1;
+  }
 }
 
 /* Læg mærke til, at vi bør stadig bruge @media, når det handler om viewporten */
 .content-wrapper {
-
-    @media (width > 700px) {
-        display: grid;
-        grid-template-columns: 1fr 250px;
-        gap: 1rlh;
-    }
+  @media (min-width: 700px) {
+      display: grid;
+      grid-template-columns: 1fr 250px;
+      gap: 1rlh;
+  }
 }

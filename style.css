@@ -54,6 +54,7 @@ section {
 
     @media (width < 600px) {
 
+        grid:revert;
         figure, .content{
             display: revert;
             grid-area: revert;
